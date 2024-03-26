@@ -110,7 +110,7 @@
       fileEvent() {
          this.fileInput.addEventListener('change', (event) => {
             // fileInput 돔에 input 값이 변화했을 시를 위한 이벤트를 등록해
-            const fileName = URL.createObjectURL(event.target.files[0]) // 이벤트 타겟 파일의 url객체를 fileName으로 할당
+            const fileName = URL.createObjectURL(event.target.files[0]) // 이벤트 타겟 첫번째 파일의 url객체를 fileName으로 할당
             const img = new Image()
             img.addEventListener('load', (e) => {
                // 이미지 객체를 만들어 로드 이벤트를 등록해
