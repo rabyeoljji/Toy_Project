@@ -1,33 +1,60 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.device {
+  position: absolute;
+  top: 10px;
+  width: 40vw;
+  height: 70vh;
+  margin: 80px 0;
+  border: 5px solid rgb(54, 168, 255);
+  border-radius: 50px;
+  display: flex;
+}
+
+.decoration {
+  display: inline-block;
+  width: 15%;
+  background-image: url("./assets/planet-decoration.png");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+}
+
 .carousel-wrapper {
   overflow: hidden;
   width: 90%;
+  height: 100%;
   margin: auto;
 }
 
 .carousel-wrapper * {
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+  position: relative;
+  top: 50px;
+  display: flex;
+  width: 100%;
+  height: 75%;
 }
 
 .carousel_item {
-  opacity: 0;
   position: absolute;
-  top: 0;
-  width: 100%;
-  margin: auto;
-  padding: 1rem 4rem;
-  z-index: 100;
+  max-height: 500px;
+  opacity: 0;
   transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
 }
 
 .carousel_item.active {
   opacity: 1;
-  position: relative;
   z-index: 900;
 }
 
@@ -44,9 +71,18 @@
   transform: translateX(100%);
 }
 
+.buttons {
+  position: absolute;
+  top: 570px;
+  left: calc(50% - 73px);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 150px;
+}
+
 .carousel_button--prev,
 .carousel_button--next {
-  position: absolute;
   top: 50%;
   width: 3rem;
   height: 3rem;
@@ -55,7 +91,7 @@
   border-radius: 50%;
   cursor: pointer;
   z-index: 1001;
-  border: 1px solid black;
+  border: 5px solid rgb(54, 168, 255);
 }
 
 .carousel_button--prev {
@@ -74,8 +110,8 @@
   height: 10px;
   top: 50%;
   left: 54%;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
+  border-right: 5px solid rgb(54, 168, 255);
+  border-bottom: 5px solid rgb(54, 168, 255);
   transform: translate(-50%, -50%) rotate(135deg);
 }
 
